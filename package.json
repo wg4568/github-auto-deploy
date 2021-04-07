@@ -1,0 +1,22 @@
+{
+    "name": "github-auto-deploy",
+    "version": "1.0.0",
+    "description": "Listen for Github webhooks, and run a script",
+    "scripts": {
+        "start": "node github-auto-deploy.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wg4568/github-auto-deploy.git"
+    },
+    "author": "William Gardner",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/wg4568/github-auto-deploy/issues"
+    },
+    "homepage": "https://github.com/wg4568/github-auto-deploy#readme",
+    "dependencies": {
+        "chalk": "^4.1.0",
+        "express": "^4.17.1"
+    }
+}
