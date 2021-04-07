@@ -22,4 +22,4 @@ Required: `config.json`
 
 Ensure that your webhook is configured on PUSH only.
 
-[Read about it](https://gardna.blogliam.com/2021/04/06/auto-deploy-git-repo/)
+[Read about it](https://gardna.blogliam.com/2021/04/07/auto-deploy/)
