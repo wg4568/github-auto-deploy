@@ -11,7 +11,6 @@ Required: `config.json`
     "repos": [
         {
             "hook": "where to bind",
-            "name": "full repo name, ex: account/repo",
             "dir": "path to local repository",
             "branch": "refspec, ex: refs/heads/main",
             "script": "executed in dir, git pull"

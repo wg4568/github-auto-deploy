@@ -15,13 +15,13 @@ function execute(repo) {
             cwd: path.resolve(repo.dir)
         },
         () => {
-            log(repo.name, "Done");
+            log(repo.hook, "Done");
         }
     );
 
     proc.stdout.on("data", (dat) => {
         dat.split("\n").forEach((line) => {
-            log(repo.name, ">", line);
+            log(repo.hook, ">", line);
         });
     });
 }
@@ -34,7 +34,7 @@ config.repos.forEach((repo) => {
 
     app.post("/" + repo.hook, (req, res) => {
         if (req.body.ref == repo.branch) {
-            log(repo.name, "Detected update");
+            log(repo.hook, "Detected update");
             execute(repo);
         }
 
@@ -43,7 +43,7 @@ config.repos.forEach((repo) => {
 
     log(
         "gh-auto-deploy",
-        `bound ${repo.name} to ::${config.port}/${repo.hook}`
+        `bound to ::${config.port}/${repo.hook}`
     );
 });
 
